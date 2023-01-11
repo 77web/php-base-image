@@ -16,6 +16,7 @@ RUN docker-php-ext-configure gd --with-jpeg=/usr/include/
 RUN docker-php-ext-install gd
 RUN docker-php-ext-install pdo_mysql
 RUN docker-php-ext-enable grpc
+RUN docker-php-ext-install intl
 RUN pecl install mongodb \
     && docker-php-ext-enable mongodb
 
