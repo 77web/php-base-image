@@ -3,7 +3,7 @@ FROM php:8.1-apache-buster
 
 # setting operating system
 RUN apt-get update \
-  && apt-get install -y libzip-dev libpng-dev libjpeg62-turbo-dev git wget acl ffmpeg --no-install-recommends \
+  && apt-get install -y icu4c libzip-dev libpng-dev libjpeg62-turbo-dev git wget acl ffmpeg --no-install-recommends \
   # refs. https://mongoc.org/libmongoc/current/installing.html
   libbson-1.0-0 cmake libssl-dev libsasl2-dev \
   && apt-get clean \
